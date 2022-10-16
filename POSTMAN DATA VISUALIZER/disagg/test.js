@@ -83,7 +83,7 @@ var response= pm.response.json();
 // console.log(response);
 
 var appliance_name_mapping=pm.environment.get("appliance_name_mapping");
-console.log("appliance_name_mapping:",appliance_name_mapping);
+// console.log("appliance_name_mapping:",appliance_name_mapping);
 appliance_name_mapping["17"]="total";
 // console.log("appliance_name_mapping:",appliance_name_mapping);
 
@@ -125,7 +125,7 @@ pm.test("appliance_name_mapping have atleast one appliance mappings !", function
 });
 
 
-console.log("testpassed:",testpassed);
+// console.log("testpassed:",testpassed);
 // if the data passes the test, we will now proceed to contruct the plot
 if(testpassed){
     // console.log("testpassed:",testpassed);
@@ -211,13 +211,13 @@ function get_disagg_data(response){
             if(!appId_to_dataset.has(appId)) appId_to_dataset.set(appId,appId_to_dataset.size);
     
             var dataset_index=appId_to_dataset.get(appId);
-            console.log("appId_to_dataset:",appId_to_dataset);
-            console.log("dataset_index:",dataset_index);
+            // console.log("appId_to_dataset:",appId_to_dataset);
+            // console.log("dataset_index:",dataset_index);
             // if dataset for particular appliance is empty then assign the constants values
             // and initiliaze the data array
             
             if(disagg_data.datasets[dataset_index]==undefined) {
-                console.log("breakpoint1");
+                // console.log("breakpoint1");
                 disagg_data.datasets[dataset_index]={
                     label:appliance_label[appId],
                     data:new Array(date_in_labels.size).fill(0),
@@ -226,11 +226,11 @@ function get_disagg_data(response){
                 disagg_data.datasets[dataset_index].data[label_index]=value;
                 // console.log("disagg_data.datasets[dataset_index]:",disagg_data.datasets[dataset_index]);
             }else{
-                console.log("breakpoint2");
+                // console.log("breakpoint2");
                 disagg_data.datasets[dataset_index].data[label_index]=value;
             }
     
-            console.log("disagg_data.datasets.data:",disagg_data.datasets);
+            // console.log("disagg_data.datasets.data:",disagg_data.datasets);
             
         }
 
