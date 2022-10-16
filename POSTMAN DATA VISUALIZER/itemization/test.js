@@ -259,7 +259,7 @@ function get_itemizationChart_data(itemization_details){
         var itemizationChart_data={
             data:{
                 labels:[],
-                datasets:[] // datasets={label:[],data:[],backgroundColor:""};
+                datasets:[] // datasets=[{label:"",data:[],backgroundColor:""},...];
             }
         };
 
