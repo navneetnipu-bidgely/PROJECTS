@@ -247,8 +247,14 @@ function get_disagg_data(response){
 
 // function to get date string from timestamp in secs
 function getDateFromTimestamp(timestamp){
-    var date=new Date(timestamp * 1000);
-    var date_str=date.toLocaleDateString("en-US");
+    try{
+        var date=new Date((timestamp-19800) * 1000);
+        var date_str=date.toLocaleDateString("en-US");
+    }catch (e){
+        console.error(e);
+        throw Error(e);
+    }
+    
     return date_str;
 }
 

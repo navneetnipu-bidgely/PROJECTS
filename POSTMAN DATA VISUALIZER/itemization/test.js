@@ -416,10 +416,10 @@ function get_aggregated_itemizationChart_data(aggregated_itemization_details){
 }
 
 // function to get date string from timestamp in secs
-function getDateFromTimestamp(timestamp,locale){
+function getDateFromTimestamp(timestamp){
     try{
-        var date=new Date(timestamp * 1000);
-        var date_str=date.toLocaleDateString(locale);
+        var date=new Date((timestamp-19800) * 1000);
+        var date_str=date.toLocaleDateString("en-US");
     }catch (e){
         console.error(e);
         throw Error(e);
