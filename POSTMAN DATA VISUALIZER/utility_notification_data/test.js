@@ -129,7 +129,7 @@ var template = `
     // Access the data passed to pm.visualizer.set() from the JavaScript
     // code of the Visualizer template
     pm.getData(function (err, value) {
-        // populate itemizationChart and aggregated_itemizationChart data for plotting
+        // populate notification_BC_chart and notification_date_chart data for plotting
         
         notification_BC_chart.data.labels=value.utilityNotification_per_BC_plot_data.data.labels;
         notification_BC_chart.data.datasets=value.utilityNotification_per_BC_plot_data.data.datasets;
