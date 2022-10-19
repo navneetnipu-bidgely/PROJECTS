@@ -1,4 +1,4 @@
-/ {{url}}/v2.0/users/{{uuid}}/endpoints
+// {{url}}/v2.0/users/{{uuid}}/endpoints
 
 var url=pm.variables.get("url");
 var uuid=pm.variables.get("uuid");
